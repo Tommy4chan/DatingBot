@@ -1,0 +1,1 @@
+from .registration_handler import register_regestration_handlers
