@@ -17,3 +17,11 @@ KB_CHOOSE_YES_OR_NOT.add(
     InlineKeyboardButton("Так", callback_data="yes"),
     InlineKeyboardButton("НІ", callback_data="no")
 )
+
+KB_MENU: Final = InlineKeyboardMarkup(2)
+KB_MENU.add(
+    InlineKeyboardButton("👤️ Моя анкета", callback_data="my_questionnaire"),
+    InlineKeyboardButton("⚙️ Фільтри", callback_data="filters"),
+    InlineKeyboardButton("💌 Знайти пару", callback_data="find"),
+    InlineKeyboardButton("🆘 Підтримка", callback_data="support")
+)

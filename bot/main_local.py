@@ -13,6 +13,7 @@ from dotenv import load_dotenv # For local use only
 
 load_dotenv() # For local use only
 
+
 BOT_TOKEN = os.getenv('BOT_TOKEN')
 async def __on_start_up(dp: Dispatcher):
     register_all_handlers(dp)
