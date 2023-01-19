@@ -33,7 +33,7 @@ async def __on_start_up(dp: Dispatcher):
     logging.info("Bot launched!")
 
 
-def start_local_bot():
+def start_bot():
     bot = Bot(token=BOT_TOKEN)
     dp = Dispatcher(bot, storage=MemoryStorage())
 

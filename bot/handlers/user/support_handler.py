@@ -48,6 +48,7 @@ async def __end_support_chat(query: CallbackQuery, state: FSMContext):
             await state.finish()
         except:
             pass
+    await query.answer()
 
 
 async def __start_support_chat(query: CallbackQuery):
@@ -64,6 +65,7 @@ async def __start_support_chat(query: CallbackQuery):
     await update_user_support_state(chat_id, 1)
 
     await SupportChatUser.support_chat_user.set()
+    await query.answer()
 
 
 async def __send_text_message_to_admin(message: types.Message):
