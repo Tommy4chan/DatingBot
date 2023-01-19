@@ -170,6 +170,7 @@ async def __process_location_change(message: types.Message, state: FSMContext):
     chat_id = message.from_user.id
     
     user_location = await get_location_by_coordinates(message.location.latitude, message.location.longitude)
+    await update_user_coordinates(chat_id, message.location.latitude, message.location.longitude)
 
     await state.update_data(location=user_location)
 
@@ -185,7 +186,6 @@ async def __location_change_correct(query: CallbackQuery, state: FSMContext):
     chat_id = query.from_user.id
 
     await update_user_location(chat_id, (await state.get_data())["location"])
-    await update_user_coordinates(chat_id, query.message.location.latitude, query.message.location.longitude)
 
     await bot.send_message(chat_id, f"Ви успішно додали інформацію про населений пункт", reply_markup=ReplyKeyboardRemove())
     await state.finish()

@@ -1,4 +1,4 @@
 from .inline import KB_CONTINUE_REGISTRATION, KB_GENDER_SELECTION, KB_CHOOSE_YES_OR_NOT, KB_MENU, KB_QUESTIONNAIRE_MENU, KB_CHANGE_QUESTIONNAIRE_MENU, \
                     KB_FILTERS_MENU, KB_QUESTIONNAIRE_REVIEW, KB_SUPPORT_MENU_USER, KB_SUPPORT_MENU_USER_END
 from .reply import KB_GET_LOCATION, KB_GET_PHONE_NUMBER, KB_END_CHAT
-from .util import get_questionnaire_answear_keyboard
+from .util import get_questionnaire_answear_keyboard, get_help_keyboard
